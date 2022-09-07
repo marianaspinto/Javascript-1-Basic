@@ -7,8 +7,3 @@ let year = ('2022');
 
 let age = parseFloat('year - birth')
 
-alert(
-    'Recruta cadastrado com sucesso!' +
-    '\n\nNome completo: ' + firstName + ' ' + lastName + '.' + 
-    '\nCampo de atuação: ' + fieldOfStudy + '.' +
-    '\nIdade: ' + (2022 - yearOfBirth)) 
