@@ -1,11 +1,14 @@
-let firstName = prompt('Qual o primeiro nome do recruta?');
-let lastName = prompt('Qual o sobrenome do recruta?');
-let fieldOfStudy = prompt('Qual o campo de estudo?');
-let birth = prompt('Qual o ano de nascimento?');
+let firstName = prompt('Informe o primeiro nome do recruta:');
+let lastName = prompt('Informe o sobrenome nome do recruta:');
+let fieldOfStudy = prompt('Qual o campo de estudo do recruta?');
+let yearOfBirth = prompt('Qual o ano de nascimento do reccruta?');
 
 let year = ('2022');
 
 let age = parseFloat('year - birth')
 
-alert('Nome completo do recruta: ' + firstName + ' ' + lastName + '.' + '\nCampo de atuação: ' + fieldOfStudy + '.' 
-+ '\nIdade: age') 
+alert(
+    'Recruta cadastrado com sucesso!' +
+    '\n\nNome completo: ' + firstName + ' ' + lastName + '.' + 
+    '\nCampo de atuação: ' + fieldOfStudy + '.' +
+    '\nIdade: ' + (2022 - yearOfBirth)) 
