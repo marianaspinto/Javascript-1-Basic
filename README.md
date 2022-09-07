@@ -8,3 +8,4 @@ Here are the topics covered:
 4. Data Comparison
 5. Logical Operators 
 6. If and Else 
+7. Switch
