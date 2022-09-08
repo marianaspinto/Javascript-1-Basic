@@ -10,3 +10,6 @@ Here are the topics covered:
 6. Structures and Conditionals 
 7. Repetition Structures
 8. Data Structures
+9. Array
+10. Objects
+11. Functions
