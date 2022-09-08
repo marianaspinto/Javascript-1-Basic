@@ -7,5 +7,6 @@ Here are the topics covered:
 3. Operators and Expressions
 4. Data Comparison
 5. Logical Operators 
-6. If and Else 
-7. Switch
+6. Structures and Conditionals 
+7. Repetition Structures
+8. Data Structures
