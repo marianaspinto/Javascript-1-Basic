@@ -30,3 +30,39 @@ function novaVaga() {
      alert("Vaga criada.")
     }
 }
+
+// Funcão de exibir informações detalhadas da vaga
+function exibirVaga() {
+    const indice = prompt("Informe o índice da vaga que deseja exibir:")
+    const vaga = vagas[indice]
+
+    const candidatosEmTexto = vaga.candidatos.reduce(function (textoFinal, candidato) {
+        return textoFinal + "\n - " + candidato
+    }, "")
+
+    alert(
+        "Vaga nº " + indice +
+        "\nNome: " + vaga.nome +
+        "\nDescrição: " + vaga.descricao +
+        "\nData limite: " + vaga.dataLimite +
+        "\nQuantidade de candidatos: " + vaga.candidatos.length +
+        "\nCandidatos inscritos: " + candidatosEmTexto
+        ) 
+}
+
+// Função para inscrever um candidato em uma vaga
+function inscreverCandidato() {
+    const candidato = prompt("Informe o nome do candidato:")
+    const indice = prompt("Informe o índice da vaga para a qual o(a) candidato(a) deseja se inscrever:")
+    const vaga = vagas[indice]
+
+    const confirmacao = confirm(
+        "Deseja inscrever o candidato " + candidato + " na vaga " + indice + "?\n" +
+        "Nome: " + vaga.nome + "\nDescrição: " + vaga.descricao + "\nData limite: " + vaga.dataLimite
+    )
+
+    if (confirmacao) {
+        vaga.candidatos.push(candidato)
+        alert("Inscrição realizada.")
+    }
+}
