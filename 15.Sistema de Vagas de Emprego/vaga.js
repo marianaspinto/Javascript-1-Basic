@@ -34,6 +34,12 @@ function novaVaga() {
 // Funcão de exibir informações detalhadas da vaga
 function exibirVaga() {
     const indice = prompt("Informe o índice da vaga que deseja exibir:")
+
+    if (indice >= vagas.length || indice < 0) {
+        alert("Índice Inválido!")
+        return 
+    }
+
     const vaga = vagas[indice]
 
     const candidatosEmTexto = vaga.candidatos.reduce(function (textoFinal, candidato) {
@@ -93,6 +99,42 @@ function exibirMenu() {
         "\n3.Visualizar uma vaga" +
         "\n4.Escrever um(a) candidato(a)" +
         "\n5.Excluir uma vaga" +
-        "\n6.Sair" +
+        "\n6.Sair" 
     )
+
+    return opcao
 }
+
+function executar() {
+    let opcao = ""
+
+    do {
+        opcao = exibirMenu()
+
+        switch(opcao) {
+            case "1":
+                listarVagas()
+                break
+            case "2":
+                novaVaga()
+                break
+            case "3":
+                exibirVaga()
+                break
+            case "4":
+                inscreverCandidato()
+                break
+            case "5":
+                excluirVaga()
+                break
+            case "6":
+                alert("Saindo...")
+                break
+             default:  
+             alert("Opção inválida!") 
+        }
+    } while (opcao !== "6")
+} 
+
+
+executar()
